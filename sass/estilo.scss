@@ -1,0 +1,11 @@
+@import 'compass/css3/opacity';
+@import 'variaveis';
+body{
+    font-size: $tam_fonte;
+    a{
+        color: $azul;
+    }
+    em{
+        @include opacity(0.3);
+    }
+}
