@@ -47,11 +47,11 @@ para
 $lib = "<b>..</b>/phamlp";
 </pre>
 para não ter que ficar acessando toda hora http://localhost/meu_projeto/sass.php você poderia abrir o seu index.php e incluir logo no início:<br/>
-<code lang="php">
+<pre lang="php">
 &lt;?php
 include "sass.php";
-&lt;?&gt;
-</code>
+?&gt;
+</pre>
 
 ## Referências
 
