@@ -31,7 +31,7 @@ exemplo:
 
 ## Transformando os arquivos da pasta sass para css
 
-Se suas pastas estiverem parecidas com o exemplo acima, basta chamar http://localhost/meu_projeto/sass.php e pronto! <br/>
+Se suas pastas estiverem parecidas com o exemplo acima, basta chamar <b>http://localhost/meu_projeto/sass.php</b> e pronto! <br/>
 Ele irá buscar o estilos.scss e transformar ele em <b>estilos.css</b> dentro da pasta css.
 
 # Dicas
@@ -46,8 +46,8 @@ para
 <pre>
 $lib = "<b>..</b>/phamlp";
 </pre>
-para não ter que ficar acessando toda hora http://localhost/meu_projeto/sass.php você poderia abrir o seu index.php e incluir logo no início:
-<code>
+para não ter que ficar acessando toda hora http://localhost/meu_projeto/sass.php você poderia abrir o seu index.php e incluir logo no início:<br/>
+<code lang="php">
 &lt;?php
 include "sass.php";
 &lt;?&gt;
@@ -77,7 +77,7 @@ include "sass.php";
 </pre>
 - inclua a extensão less juntamente com a extensão css, de forma que fique assim:
 <pre>
-&lt;documenttype id="CSS" internaltype="Text" <b>winfileextension="css,less,sass,scss,sassc" macfileextension="css,less"</b> file="Default.css" writebyteordermark="false"&gt;
+&lt;documenttype id="CSS" internaltype="Text" <b>winfileextension="css,less,sass,scss,sassc" macfileextension="css,less,sass,scss,sassc"</b> file="Default.css" writebyteordermark="false"&gt;
         &lt;TITLE&gt;
                 &lt;MMString:loadString id="mmdocumenttypes_30" /&gt;
         &lt;/TITLE&gt;
