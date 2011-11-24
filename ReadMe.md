@@ -8,7 +8,7 @@ Este projeto é uma particularidade do PHamlP - PHP port of Haml and Sass
 http://code.google.com/p/phamlp/
 
 ## Instalação
-Basta baixar este repositorio ou clicar em Download e baixar tudo.
+Basta baixar este repositorio pelo seu Git ou clicar no botão [&veebar;ZIP] ou clicar em Download e baixar tudo.
 
 ## Utilizado
 - Primeiramente você precisará de um servidor local em php, tipo... XAMPP, WAMPP, EasyPHP
