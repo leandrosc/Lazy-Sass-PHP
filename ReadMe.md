@@ -1,6 +1,6 @@
 # Lazy Sass PHP
 
-Projeto simples para compilar arquivos Sass e SCSS, além de incluir Compass.
+Projeto simples para compilar arquivos Sass e SCSS, além de incluir Compass v3.1.
 
 ## Projeto Original
 
@@ -14,7 +14,8 @@ Basta baixar este repositorio ou clicar em Download e baixar tudo.
 - Primeiramente você precisará de um servidor local em php, tipo... XAMPP, WAMPP, EasyPHP
 - Segundo, você precisa estar acostumado a rodar o servidor local, tipo... digitar no navegador http://localhost e funcionar
 - depois é só ir na sua pasta onde se encontra o diretório css e colocar os arquivos deste projeto próximos á ela
-- exemplo:
+
+exemplo:
 <pre>
     meu_projeto/
         css/
@@ -36,16 +37,16 @@ Ele irá buscar o estilos.scss e transformar ele em <b>estilos.css</b> dentro da
 # Dicas
 
 Se você quiser agilizar e reaproveitar a biblioteca para outros projetos, basta:
-- jogar a pasta <b>phamlp</b> para um nível de pasta anterior
-- abrir o arquivo <b>sass.php</b> e trocar
+jogar a pasta <b>phamlp</b> para um nível de pasta anterior
+abrir o arquivo <b>sass.php</b> e trocar
 <pre>
 $lib = "./phamlp";
 </pre>
-- para
+para
 <pre>
 $lib = "<b>..</b>/phamlp";
 </pre>
-- para não ter que ficar acessando toda hora http://localhost/meu_projeto/sass.php você poderia abrir o seu index.php e incluir logo no início:
+para não ter que ficar acessando toda hora http://localhost/meu_projeto/sass.php você poderia abrir o seu index.php e incluir logo no início:
 <code>
 &lt;?php
 include "sass.php";
