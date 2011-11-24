@@ -7,9 +7,6 @@ Projeto simples para compilar arquivos Sass e SCSS, além de incluir Compass v3.
 Este projeto é uma particularidade do PHamlP - PHP port of Haml and Sass
 http://code.google.com/p/phamlp/
 
-## Instalação
-Basta baixar este repositorio pelo seu Git ou clicar no botão [&veebar;ZIP] ou clicar em Download e baixar tudo.
-
 ## Utilizado
 - Primeiramente você precisará de um servidor local em php, tipo... XAMPP, WAMPP, EasyPHP
 - Segundo, você precisa estar acostumado a rodar o servidor local, tipo... digitar no navegador http://localhost e funcionar
@@ -52,7 +49,16 @@ para não ter que ficar acessando toda hora http://localhost/meu_projeto/sass.ph
 include "sass.php";
 ?&gt;
 </pre>
-
+Caso você não queira que apareça as mensagens de saída do compilador, basta desativar a flag <b>$output</b>
+<pre lang="php">
+&lt;?php
+$output=false;//tem que ser antes de chamar o compilador
+include "sass.php";//o cara que vai procurar seus arquivos nas devidas pastas
+.
+.
+.
+?&gt;
+</pre>
 ## Referências
 
 - http://code.google.com/p/phamlp/

@@ -4,6 +4,7 @@
  * @author Leandro S. Cunha <leandrosc999@yahoo.com.br>
  * @since 2011
  * @link https://github.com/leandrosc/Lazy-Sass-PHP
+ * @name Lazy-Sass-PHP
  */
 $lib = "./phamlp";
 include "$lib/SassParser.php";
@@ -17,19 +18,19 @@ try {
     #pastas locais com arquivos scss, sass e sassc
     $folders = array('sass');
     foreach ($folders as $folder) {
-        if ($handle = opendir($folder)):
+        if ($handle = @opendir($folder)):
             while (false !== ($file = readdir($handle))) {
                 if ($file != "." && $file != ".." && strpos($file, '_') !== 0) {
                     if ($css = $sass->toCss("$folder/$file")) {
                         $file = str_replace(array(SassFile::SASS,SassFile::SASSC,SassFile::SCSS), '', $file);
-                        $fp = fopen($sass->getCss_location()."/$file".'css', 'w');
-                        fwrite($fp, $css);
-                        fclose($fp);
+                        $fp = @fopen($sass->getCss_location()."/$file".'css', 'w');
+                        @fwrite($fp, $css);
+                        @fclose($fp);
                         echo $output ? "{$file}css criado.<br>" : '';
                     }
                 }
             }
-            closedir($handle);
+            @closedir($handle);
         endif;
     }
 
