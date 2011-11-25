@@ -78,14 +78,14 @@ class SassFile {
                 return $_filename;
             }
 
-
+            
             foreach (array_merge(array(dirname($parser->filename["dirname"])), $parser->load_paths) as $loadPath) {
                 $path = self::findFile($_filename, realpath($loadPath));
                 if ($path !== false) {
                     return $path;
                 }
             } // foreach
-
+            
             if (!empty($parser->template_location)) {
                 $path = self::findFile($_filename, realpath($parser->template_location));
                 if ($path !== false) {
@@ -112,17 +112,18 @@ class SassFile {
                 return realpath($dir . DIRECTORY_SEPARATOR . $file);
             }
         }
+        if(@is_readable($dir) && strpos($dir, '//') === false){
+            $files = array_slice(scandir($dir), 2);
 
-        $files = array_slice(scandir($dir), 2);
-
-        foreach ($files as $file) {
-            if (is_dir($dir . DIRECTORY_SEPARATOR . $file)) {
-                $path = self::findFile($filename, $dir . DIRECTORY_SEPARATOR . $file);
-                if ($path !== false) {
-                    return $path;
+            foreach ($files as $file) {
+                if (is_dir($dir . DIRECTORY_SEPARATOR . $file)) {
+                    $path = self::findFile($filename, $dir . DIRECTORY_SEPARATOR . $file);
+                    if ($path !== false) {
+                        return $path;
+                    }
                 }
-            }
-        } // foreach
+            } // foreach
+        }
         return false;
     }
 

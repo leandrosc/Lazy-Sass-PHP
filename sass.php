@@ -8,7 +8,7 @@
  */
 $lib = "./phamlp";
 include "$lib/SassParser.php";
-$output = $output ? $output : true; //flag de avisos, se false não avisa nada do que está acontecendo
+$output = isset($output) ? $output : true; //flag de avisos, se false não avisa nada do que está acontecendo
 try {
     $sass = new SassParser(array(
                 'style' => 'compressed',
