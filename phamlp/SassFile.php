@@ -112,11 +112,11 @@ class SassFile {
                 return realpath($dir . DIRECTORY_SEPARATOR . $file);
             }
         }
-        if(@is_readable($dir) && strpos($dir, '//') === false){
+        if(@is_readable($dir)){
             $files = array_slice(scandir($dir), 2);
 
             foreach ($files as $file) {
-                if (is_dir($dir . DIRECTORY_SEPARATOR . $file)) {
+                if (is_dir($dir . DIRECTORY_SEPARATOR . $file) && is_writable($dir . DIRECTORY_SEPARATOR . $file) && ($file == 'phamlp' || strpos($dir,'phamlp') !== false || $file == 'stylesheets' || strpos($dir,'stylesheets') !== false)) {
                     $path = self::findFile($filename, $dir . DIRECTORY_SEPARATOR . $file);
                     if ($path !== false) {
                         return $path;

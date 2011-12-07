@@ -16,7 +16,7 @@ try {
                 'css_location' => './css'
             ));
     #pastas locais com arquivos scss, sass e sassc
-    $folders = array('sass');
+    $folders = array('stylesheets');
     foreach ($folders as $folder) {
         if ($handle = @opendir($folder)):
             while (false !== ($file = readdir($handle))) {
